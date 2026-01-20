@@ -1,0 +1,26 @@
+{
+    "facil": [
+        {
+            "puzzleImage": "puzzle1",
+            "options": ["puzzle1_op1", "puzzle1_op2", "puzzle1_op3"],
+            "correctIndex": 0,
+            "prompt": "¿Cuál de estas figuras corres?"
+        }
+    ],
+    "normal": [
+        {
+            "puzzleImage": "puzzle2",
+            "options": ["puzzle2_op1", "puzzle2_op2", "puzzle2_op3"],
+            "correctIndex": 2,
+            "prompt": "¿Visualizando esta figura, cual de las siguientes figuras corresponde con la primera?"
+        }
+    ],
+    "dificil": [
+        {
+            "puzzleImage": "puzzle1",
+            "options": ["puzzle1_op1", "puzzle1_op2", "puzzle1_op3"],
+            "correctIndex": 0,
+            "prompt": "¿Qué figura tridimensional se forma al plegar el patrón?"
+        }
+    ]
+}

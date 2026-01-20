@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Fondo con imagen (rellena el contenedor) -->
+    <item>
+        <bitmap
+            android:src="@drawable/background_admin"
+            android:gravity="fill"/>
+    </item>
+
+    <!-- Capa semitransparente con esquinas redondeadas -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#CAFAFAFA"/> <!-- o usa "#CCFAFAFA" para transparencia -->
+            <corners android:radius="30dp" />
+        </shape>
+    </item>
+
+</layer-list>
+

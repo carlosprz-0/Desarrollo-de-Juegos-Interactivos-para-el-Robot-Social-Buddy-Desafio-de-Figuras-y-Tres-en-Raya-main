@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace "com.bfr.helloworld"
+    compileSdk 30
+
+    defaultConfig {
+        applicationId "com.bfr.tresenraya"
+        minSdk 28
+        targetSdk 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation (platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
+
+    implementation 'com.bluefrogrobotics.buddy:BuddySDK:2.4+'
+
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+
+    // Test + instrumentación
+    implementation 'androidx.test.ext:junit:1.1.5'         // más estable
+    implementation 'androidx.test:core:1.5.0'               // opcional
+    implementation 'androidx.test:monitor:1.6.1'            // evita 1.7.2 que requiere SDK >30
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation 'org.testng:testng:6.9.6'
+    androidTestImplementation 'org.testng:testng:6.9.6'
+
+    implementation 'com.google.firebase:firebase-firestore:24.7.1'
+
+}

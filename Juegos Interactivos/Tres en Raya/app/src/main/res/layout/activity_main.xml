@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <FrameLayout
+        android:id="@+id/all_gameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/windowBackground"
+        android:visibility="visible">
+
+        <!-- Input de nombre (incluido dinámicamente) -->
+
+        <!-- Layout del juego -->
+
+        <LinearLayout
+            android:id="@+id/gameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:visibility="visible">
+
+            <!-- Marcadores -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#ECECEC">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/player_card_x"
+                    android:padding="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/playerXScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jugador 1 (X): 0"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/player_card_o"
+                    android:padding="12dp"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/playerOScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jugador 2 (O): 0"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Tablero -->
+            <FrameLayout
+                android:id="@+id/gameContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp">
+
+                <GridLayout
+                    android:id="@+id/gameGrid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="3"
+                    android:padding="8dp"
+                    android:rowCount="3"
+                    android:useDefaultMargins="true">
+
+                    <Button android:id="@+id/button_00" style="@style/TicTacToeButton" />
+                    <Button android:id="@+id/button_01" style="@style/TicTacToeButton" />
+                    <Button android:id="@+id/button_02" style="@style/TicTacToeButton" />
+                    <Button android:id="@+id/button_10" style="@style/TicTacToeButton" />
+                    <Button android:id="@+id/button_11" style="@style/TicTacToeButton" />
+                    <Button android:id="@+id/button_12" style="@style/TicTacToeButton" />
+                    <Button android:id="@+id/button_20" style="@style/TicTacToeButton" />
+                    <Button android:id="@+id/button_21" style="@style/TicTacToeButton" />
+                    <Button android:id="@+id/button_22" style="@style/TicTacToeButton" />
+
+                </GridLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
